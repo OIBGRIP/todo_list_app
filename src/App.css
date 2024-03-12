@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+li {
+  background-color: #f0f0f0; /* Background color */
+  padding: 10px; /* Padding around each item */
+  margin-bottom: 5px; /* Spacing between items */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center align text */
+  line-height: 1.5; /* Set line height for better readability */
+}
+
+li:hover {
+  background-color: #e0e0e0; /* Background color on hover */
+}
+
