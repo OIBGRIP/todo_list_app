@@ -83,6 +83,8 @@ export const CreatePost = () => {
             const updatedPostData = await response.json();
             setMergedPosts(mergedPosts.map(post => post.id === id ? { ...post, title: updatedPostData.title } : post));
 
+            setUpdatedTitle('')
+            
         } catch (error) {
             console.log('Error updating post:', error);
         } finally {
