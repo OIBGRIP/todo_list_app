@@ -84,7 +84,6 @@ export const CreatePost = () => {
             setMergedPosts(mergedPosts.map(post => post.id === id ? { ...post, title: updatedPostData.title } : post));
 
             setUpdatedTitle('')
-            
         } catch (error) {
             console.log('Error updating post:', error);
         } finally {
@@ -130,7 +129,7 @@ export const CreatePost = () => {
                             <div>
                                 <input
                                     type="text"
-                                    value={updatedTitle}
+                                    value={updatedTitle || post.title}
                                     onChange={(e) => setUpdatedTitle(e.target.value)}
                                 />
                                 <button onClick={() => handleUpdatePost(post.id)}>Save</button>
@@ -138,7 +137,7 @@ export const CreatePost = () => {
                         ) : (
                             <div>
                                 {post.title}
-                                <button onClick={() => setEditTitleId(post.id)}>Update</button>
+                                <button onClick={() => { setEditTitleId(post.id); setUpdatedTitle(post.title); }}>Update</button>
                                 <button onClick={() => handleDeletePost(post.id)}>Delete</button>
                             </div>
                         )}
