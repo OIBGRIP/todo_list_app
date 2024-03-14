@@ -129,7 +129,7 @@ export const CreatePost = () => {
                             <div>
                                 <input
                                     type="text"
-                                    value={updatedTitle || post.title}
+                                    value={updatedTitle}
                                     onChange={(e) => setUpdatedTitle(e.target.value)}
                                 />
                                 <button onClick={() => handleUpdatePost(post.id)}>Save</button>
